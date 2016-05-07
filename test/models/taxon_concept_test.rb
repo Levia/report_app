@@ -5,6 +5,6 @@ class TaxonConceptTest < ActiveSupport::TestCase
     tc = TaxonConcept.create({scientific_name: 'Canis Lupus'})
     tc2 = TaxonConcept.new({scientific_name: 'Canis Lupus'})
 
-    assert !tc2.valid?, "Scientific name has already been taken"
+    assert !tc2.valid?, "Scientific name uniqueness is not being validated"
   end
 end
