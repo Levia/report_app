@@ -1,0 +1,10 @@
+<div class="report-form-container">
+  <%= form_for @report do |f| %>
+    <div class="form-group">
+      <%= f.label :date %>
+      <%= f.date_field :date %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>
