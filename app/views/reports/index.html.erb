@@ -7,6 +7,7 @@
     <tr>
       <th>ID</th>
       <th>Date</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= report.id %></td>
         <td><%= report.date %></td>
+        <td><%= button_to "Show report", report_path(report), method: 'get' %></td>
       </tr>
     <% end %>
   </tbody>

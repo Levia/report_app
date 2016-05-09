@@ -10,9 +10,14 @@ class ReportsController < ApplicationController
   end
 
   def edit
+    @report = Report.find(params[:id])
   end
 
   def update
+    @report = Report.find(params[:id])
+
+    flash[:notice] = "Report successfully updated" if @report.update_attributes(report_params)
+    respond_with(@report)
   end
 
   def new

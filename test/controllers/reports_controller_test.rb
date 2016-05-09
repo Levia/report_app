@@ -31,4 +31,14 @@ class ReportsControllerTest < ActionController::TestCase
     end
     assert_redirected_to report_path(assigns(:report))
   end
+
+  test "should get edit" do
+    get :edit, id: @report.id
+    assert_response :success
+  end
+
+  test "should update report" do
+    put :update, id: @report.id, report: {date: Date.today}
+    assert_redirected_to report_path(@report)
+  end
 end

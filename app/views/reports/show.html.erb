@@ -1,3 +1,5 @@
 <h2>Report #<%= @report.id %></h2>
 
 <%= @report.date %>
+
+<%= button_to "Edit report", edit_report_path(@report), method: 'get' %>
