@@ -32,6 +32,10 @@ class ReportsController < ApplicationController
   end
 
   def destroy
+    @report = Report.find(params[:id])
+
+    flash[:notice] = "Report successfully deleted" if @report.destroy
+    respond_with(@report)
   end
 
   private

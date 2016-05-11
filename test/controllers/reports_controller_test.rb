@@ -41,4 +41,11 @@ class ReportsControllerTest < ActionController::TestCase
     put :update, id: @report.id, report: {date: Date.today}
     assert_redirected_to report_path(@report)
   end
+
+  test "should destroy a report" do
+    assert_difference('Report.count', -1) do
+      delete :destroy, id: @report.id
+    end
+    assert_redirected_to reports_path
+  end
 end
